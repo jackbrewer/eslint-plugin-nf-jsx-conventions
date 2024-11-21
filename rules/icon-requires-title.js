@@ -8,7 +8,7 @@ module.exports = {
     },
     messages: {
       missingTitle:
-        'Icon component "{{ name }}" must have a `title` attribute if used in isolation. Use `title=""` to intentionally omit the title',
+        'Icon component "{{ name }}" must have a `title` attribute if used in isolation. Use `title={undefined}` to intentionally omit the title',
     },
     schema: [], // no options
   },
