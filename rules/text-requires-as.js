@@ -7,7 +7,8 @@ module.exports = {
       recommended: true,
     },
     messages: {
-      missingAs: "The `Text` component must have an `as` attribute.",
+      missingAs:
+        "The `Text` component should use an `as` attribute to specify the intended element.",
     },
     schema: [], // no options
   },
