@@ -14,6 +14,7 @@ module.exports = {
   },
   create(context) {
     const importedIcons = new Set();
+    const internalIconComponent = "Icon"; // Internal Icon component to check
 
     return {
       ImportDeclaration(node) {
@@ -28,8 +29,13 @@ module.exports = {
       JSXOpeningElement(node) {
         const componentName = node.name.name;
 
-        // Skip if it's not one of the imported icons
-        if (!importedIcons.has(componentName)) return;
+        // Check if it's an imported StyledIcon or the internal Icon component
+        if (
+          !importedIcons.has(componentName) &&
+          componentName !== internalIconComponent
+        ) {
+          return;
+        }
 
         const hasTitleAttribute = node.attributes.some(
           (attr) => attr.type === "JSXAttribute" && attr.name.name === "title"
