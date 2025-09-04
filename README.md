@@ -32,7 +32,9 @@ To use errors instead of warnings, you can tweak rules manually:
 module.exports = {
   plugins: ["nf-jsx-conventions"],
   rules: {
-    "nf-jsx-conventions/no-direct-icon-imports": "error",
+    "nf-jsx-conventions/text-requires-as": "error",
+    "nf-jsx-conventions/no-button-inside-link": "error",
+    "nf-jsx-conventions/icon-requires-title": "error",
   },
 };
 ```
