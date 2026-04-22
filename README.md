@@ -1,3 +1,5 @@
+> Currently unused
+
 # eslint-plugin-nf-jsx-conventions
 
 Tested against ESLint 8.
